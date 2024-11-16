@@ -12,7 +12,7 @@ import { HeaerLogo } from "@/constants/header-constant";
 export default function Header() {
     return (
         <>
-        <CardWrapper className="sticky top-0">
+        <CardWrapper className="sticky top-0 z-50">
             <ContainerWrapper>
                 <FlexRowWrapper className="justify-between">
                     <Image src={HeaerLogo} alt="moviehub-logo" width={55} height={55}/>

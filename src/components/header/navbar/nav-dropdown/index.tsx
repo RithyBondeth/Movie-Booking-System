@@ -14,16 +14,16 @@ export default function NavDropdown() {
     return (
         <>
         {pathname === "/" && <DropdownMenu>
-            <DropdownMenuTrigger className={cn(buttonVariants({ variant: "ghost" }))}>
+            <DropdownMenuTrigger className="curved-button">
                 <FlexRowWrapper>
-                    <MapPin color={"red"}/>
+                    <MapPin/>
                     <p>All Cinemas</p>
                 </FlexRowWrapper>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="bg-primary text-muted border-transparent">
                 <DropdownMenuRadioGroup value={cinema} onValueChange={setCinema}>
                     {["Phnom Penh", "Battambang", "Siem Reap"].map((item) => (
-                        <DropdownMenuRadioItem value={item} key={item} className={`py-3 px-6 ${item === cinema && "text-red-500"}`}>
+                        <DropdownMenuRadioItem value={item} key={item} className={`py-3 px-6 ${item === cinema && "bg-primary-foreground text-primary"}`}>
                             {item}
                         </DropdownMenuRadioItem>
                     ))}

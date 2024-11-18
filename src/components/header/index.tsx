@@ -12,18 +12,18 @@ import { HeaerLogo } from "@/constants/header-constant";
 export default function Header() {
     return (
         <>
-        <CardWrapper className="sticky top-0 z-50">
+        <CardWrapper className="sticky top-0 z-50 bg-primary">
             <ContainerWrapper>
                 <FlexRowWrapper className="justify-between">
                     <Image src={HeaerLogo} alt="moviehub-logo" width={55} height={55}/>
                     <FlexRowWrapper>  
-                        <IconButton label="Join Now" className={cn(buttonVariants({variant: "ghost"}))}>
+                        <IconButton label="Join Now" className="curved-button">
                             <User/>
                         </IconButton>
-                        <IconButton label="Ticket" className={cn(buttonVariants({variant: "ghost"}))}>
+                        <IconButton label="Ticket" className="curved-button">
                             <Ticket/>
                         </IconButton>
-                        <IconButton label="Notification" className={cn(buttonVariants({variant: "ghost"}))}>
+                        <IconButton label="Notification" className="curved-button">
                             <Bell/>
                         </IconButton>
                     </FlexRowWrapper>

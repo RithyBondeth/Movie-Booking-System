@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export default function Slider({ slideData }: { slideData: number[] }) {
+export default function SlideBox({ slideData }: { slideData: number[] }) {
     return (
         <Swiper
             modules={[Navigation, Pagination]}
@@ -25,7 +25,9 @@ export default function Slider({ slideData }: { slideData: number[] }) {
             className='mt-10'
         >
            {slideData.map((item, index) => (
-            <SwiperSlide key={index} className='min-h-[450px] rounded-3xl bg-muted'>{item}</SwiperSlide>
+            <SwiperSlide key={index} className='min-h-[450px] rounded-3xl bg-primary-foreground'>
+               
+            </SwiperSlide>
            ))}
         </Swiper>
     )

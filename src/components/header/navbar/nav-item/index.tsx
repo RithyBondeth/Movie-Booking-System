@@ -12,16 +12,15 @@ type NavItemProps = {
     link: string,
     className?: string,
     size?: number,
-    color?: string,
 }
 
-export default function NavItem({ icon: Icon, label, link, className, size = 20, color }: NavItemProps) {
+export default function NavItem({ icon: Icon, label, link, className, size = 20 }: NavItemProps) {
     const pathname = usePathname();
 
     return (
-        <Link href={link}>
-            <IconButton label={label} className={cn(buttonVariants({variant: `${pathname === link ? "destructive" : "ghost"}`}), className)}>
-                <Icon size={size} color={pathname === link ? "white" : "black"}/>
+        <Link href={link} className={cn(className, `${pathname === link ? 'px-6' : 'bg-transparent border-transparent px-0'} duration-200 curved-button`)}>
+            <IconButton label={label}>
+                <Icon size={size}/>
             </IconButton>
         </Link>
     )   

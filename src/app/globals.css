@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -67,6 +63,12 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-primary text-primary-foreground;
   }
-}
+  .curved-button {
+    @apply border-2 border-muted-foreground bg-card-foreground text-muted text-sm rounded-3xl py-2 px-5 cursor-pointer duration-200 hover:bg-transparent;
+  }
+  .auth-button {
+    @apply relative overflow-hidden h-12 text-center py-3 px-12 m-1 rounded-3xl duration-300 cursor-pointer;
+  }
+} 

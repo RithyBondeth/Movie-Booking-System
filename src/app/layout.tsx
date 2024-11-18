@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
-import Header from "@/components/header";
 import Head from "next/head";
 
 const ubuntu = Ubuntu({
@@ -29,7 +28,6 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/moviehub.png" type="image/png" />
       </Head>
       <body className={ubuntu.className}>
-        <Header/>
         {children}
       </body>
     </html>

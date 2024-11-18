@@ -9,10 +9,10 @@ import { navbarMenu } from "@/constants/header-constant";
 
 export default function Navbar() {
     return (
-        <CardWrapper className="mt-px">
+        <CardWrapper className="mt-px bg-primary">
             <ContainerWrapper className="flex justify-start">
                 <FlexRowWrapper className="w-full justify-between relative p-1.5">
-                    <FlexRowWrapper>
+                    <FlexRowWrapper className="gap-5">
                         {navbarMenu.map((item) => <NavItem key={item.id} icon={item.icon} link={item.link} label={item.label}/>)}
                         <NavDropdown/>
                     </FlexRowWrapper>

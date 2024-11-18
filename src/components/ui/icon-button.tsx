@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
-import FlexRowWrapper from "../utilities/flexrow-wrapper";
+import { cn } from "@/lib/utils";
 
-export default function IconButton({ label, className, children }: { label?: string, className?: string, children: ReactNode }) {
+export default function IconButton({ label, className, children, onClick }: { label?: string, className?: string, onClick?: () => void, children: ReactNode }) {
     return (
-        <FlexRowWrapper className={className}>
+        <div className={cn("flex items-center gap-2", className)} onClick={onClick}>
             {children}
             <p>{label}</p>
-        </FlexRowWrapper>
+        </div>
     );
 }

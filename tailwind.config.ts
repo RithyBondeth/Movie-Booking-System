@@ -10,8 +10,18 @@ export default {
   ],
   theme: {
   	extend: {
+		screens: {
+			'phone-xl': { 'max': '480px' },
+			'phone-lg': { 'max': '360px' },
+			'phone-md': { 'max': '300px' },
+			'phone-sm': { 'max': '260px' },
+			'tablet-md': { 'max': '630px' },
+			'tablet-sm': { 'max': '565px' },
+			'tablet-lg': { 'max': '865px' },
+			'tablet-xl': { 'max': '1050px' }
+		},
   		colors: {
-			main: '#859F3D',
+			main: '#FF4545',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

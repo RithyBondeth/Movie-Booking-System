@@ -10,6 +10,7 @@ import { HeaerLogo } from "@/constants/header-constant";
 import NotificationDropdown from "./notification";
 import { useRef, useState } from "react";
 import { useOnClickOutside } from "@/hooks/use-onclickoutside";
+import Link from "next/link";
 
 export default function Header() {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -23,16 +24,22 @@ export default function Header() {
             <ContainerWrapper>
                 <FlexRowWrapper className="justify-between relative">
                     <Image src={HeaerLogo} alt="moviehub-logo" width={55} height={55}/>
-                    <FlexRowWrapper>  
-                        <IconButton label="Join Now" className="curved-button">
-                            <User/>
-                        </IconButton>
-                        <IconButton label="Ticket" className="curved-button">
-                            <Ticket/>
-                        </IconButton>
-                        <IconButton label="Notification" className="curved-button" onClick={() => setOpenNotification(true)}>
-                            <Bell/>
-                        </IconButton>
+                    <FlexRowWrapper> 
+                        <Link href="/auth">
+                            <IconButton label="Join Now" className="curved-button tablet-sm:[&>p]:hidden">
+                                <User/>
+                            </IconButton>
+                        </Link>
+                        <Link href="/">
+                            <IconButton label="Ticket" className="curved-button tablet-sm:[&>p]:hidden">
+                                <Ticket/>
+                            </IconButton>
+                        </Link>
+                        <Link href="/">
+                            <IconButton label="Notification" className="curved-button tablet-sm:[&>p]:hidden" onClick={() => setOpenNotification(true)}>
+                                <Bell/>
+                            </IconButton>
+                        </Link>
                         {openNotification && <NotificationDropdown ref={dropdownRef}/>}
                     </FlexRowWrapper>
                 </FlexRowWrapper>

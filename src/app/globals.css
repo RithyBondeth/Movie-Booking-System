@@ -69,6 +69,6 @@
     @apply border-2 border-muted-foreground bg-card-foreground text-muted text-sm rounded-3xl py-2 px-5 cursor-pointer duration-200 hover:bg-transparent;
   }
   .auth-button {
-    @apply relative overflow-hidden h-12 text-center py-3 px-12 m-1 rounded-3xl duration-300 cursor-pointer;
+    @apply text-center text-sm py-3 px-8 m-1 text-nowrap rounded-3xl duration-300 cursor-pointer tablet-xl:px-5;
   }
-} 
+}

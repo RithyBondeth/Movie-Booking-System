@@ -1,5 +1,4 @@
 "use client"
-import { buttonVariants } from "@/components/ui/button";
 import IconButton from "@/components/ui/icon-button";
 import { cn } from "@/lib/utils";
 import { LucideIcon } from "lucide-react";

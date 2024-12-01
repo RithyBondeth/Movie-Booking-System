@@ -11,19 +11,21 @@ import NotificationDropdown from "./notification";
 import { useRef, useState } from "react";
 import { useOnClickOutside } from "@/hooks/use-onclickoutside";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
     const dropdownRef = useRef<HTMLDivElement | null>(null);
     const [openNotification, setOpenNotification] = useState<boolean>(false);
+    const router = useRouter();
 
-    useOnClickOutside(dropdownRef, () => setOpenNotification(false));
+    useOnClickOutside(dropdownRef, () => setOpenNotification(false));    
 
     return (
         <>
         <CardWrapper className="sticky top-0 z-50 bg-primary">
             <ContainerWrapper>
                 <FlexRowWrapper className="justify-between relative">
-                    <Image src={HeaerLogo} alt="moviehub-logo" width={55} height={55}/>
+                    <Image src={HeaerLogo} alt="moviehub-logo" width={55} height={55} className="cursor-pointer" onClick={() => router.push("/")}/>
                     <FlexRowWrapper> 
                         <Link href="/auth">
                             <IconButton label="Join Now" className="curved-button tablet-sm:[&>p]:hidden">

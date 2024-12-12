@@ -6,11 +6,11 @@ import { cn } from "@/lib/utils";
 import { MenuIcon } from "lucide-react";
 import NavItem from "../navbar/nav-item";
 
-export default function ResponsiveDropdown({ className }: { className: string }) {
+export default function ResponsiveDropdown({ className }: { className?: string }) {
     return (
         <DropdownMenu>
-            <DropdownMenuTrigger className="curved-button">
-                <FlexRowWrapper className=""> 
+            <DropdownMenuTrigger className="curved-button hidden tablet-lg:block">
+                <FlexRowWrapper> 
                     <MenuIcon/>
                 </FlexRowWrapper>
             </DropdownMenuTrigger>

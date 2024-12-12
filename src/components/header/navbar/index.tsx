@@ -17,7 +17,7 @@ export default function Navbar() {
                         {navbarMenu.map((item) => <NavItem key={item.id} icon={item.icon} link={item.link} label={item.label}/>)}
                         <NavDropdown/>
                     </FlexRowWrapper>
-                    <ResponsiveDropdown className="hidden tablet-lg:block"/>
+                    <ResponsiveDropdown/>
                     <Search/>
                 </FlexRowWrapper>
             </ContainerWrapper>

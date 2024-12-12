@@ -29,7 +29,7 @@ export default function HomePage() {
       </FlexColWrapper>
       {/* Movie Box Section */}
       <GridWrapper className="gap-10">
-        {[1, 2, 3, 4, 5, 6].map((item) => (
+        {[1, 2, 3].map((item) => (
           <MovieBox 
             key={item}
             movie={{
